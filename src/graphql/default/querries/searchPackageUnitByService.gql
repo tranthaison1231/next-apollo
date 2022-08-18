@@ -1,0 +1,3 @@
+query searchPackageUnitByService($input: SearchPackageUnitsInput!) {
+  searchPackageUnitByService(input: $input)
+}

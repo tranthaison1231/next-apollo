@@ -1,0 +1,21 @@
+query getLocations($queryParams: LocationQueryDto!) {
+  getLocations(queryParams: $queryParams) {
+    meta {
+      ...MetaFragment
+    }
+    items {
+      id
+      name
+      isActive
+      address
+      thumbnail
+      description
+      gallery
+      amenityIds
+      minPrice
+      maxPrice
+      createdAt
+      updatedAt
+    }
+  }
+}

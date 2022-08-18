@@ -1,0 +1,11 @@
+query getIncidentTypes($queryParams: QueryFilterDto!) {
+  getIncidentTypes(queryParams: $queryParams) {
+    meta {
+      ...MetaFragment
+    }
+    items {
+      id
+      name
+    }
+  }
+}

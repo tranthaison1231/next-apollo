@@ -1,0 +1,59 @@
+query getIncidents($queryParams: QueryFilterDto!) {
+  getIncidents(queryParams: $queryParams) {
+    meta {
+      ...MetaFragment
+    }
+    items {
+      id
+      typeId
+      createdAt
+      updatedAt
+      locationId
+      incidentType {
+        id
+        name
+        icon
+        description
+      }
+      message
+      priority
+      status
+      customerId
+      customer {
+        fullName
+        email
+        avatar
+      }
+      images
+      files
+      title
+      dueDate
+      assigneeId
+      assignee {
+        id
+        avatar
+        fullName
+        username
+      }
+      customerType
+      completeInfo
+      isFromApp
+      inbox {
+        id
+        title
+        logo
+        clientHasNewMessage
+        businessHasNewMessage
+        lastMessageId
+        enquiryType
+        serviceId
+        packageId
+        packageType
+        duration
+        people
+        startDate
+        message
+      }
+    }
+  }
+}

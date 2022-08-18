@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@/pages/*": ["src/pages/*"],
+      "@/shared/*": ["src/shared/*"],
+      "@/generated/*": ["src/generated/*"],
+      "@/configs/*": ["src/configs/*"],
+      "@/graphql/*": ["src/graphql/*"]
+    },
+    "incremental": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src", "next.config.js", "jest.config.js"],
+  "exclude": ["node_modules"]
+}

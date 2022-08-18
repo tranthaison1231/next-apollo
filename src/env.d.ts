@@ -1,0 +1,29 @@
+/* eslint-disable @typescript-eslint/naming-convention */
+declare namespace NodeJS {
+  interface Process {
+    env: {
+      NEXT_PUBLIC_NODE_ENV: string;
+      NEXT_PUBLIC_BASE_URL: string;
+      NEXT_PUBLIC_BASE_PUBLIC_URL: string;
+      NEXT_PUBLIC_S3_URL: string;
+      NEXT_PUBLIC_AWS_COGNITO_REGION: string;
+      NEXT_PUBLIC_AWS_USER_POOL_ID: string;
+      NEXT_PUBLIC_AWS_USER_POOL_WEB_CLIENT_ID: string;
+      NEXT_PUBLIC_AUTH_RESPONSE_TYPE: string;
+      NEXT_PUBLIC_AUTH_DOMAIN: string;
+      NEXT_PUBLIC_AUTH_SIGN_IN_REDIRECT_URL: string;
+      NEXT_PUBLIC_AUTH_SIGN_OUT_REDIRECT_URL: string;
+      NEXT_PUBLIC_CODE_GEN_TOKEN: string;
+      NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY: string;
+      NEXT_PUBLIC_FIREBASE_KEY: string;
+      NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN: string;
+      NEXT_PUBLIC_FIREBASE_DATABASE_URL: string;
+      NEXT_PUBLIC_FIREBASE_PROJECT_ID: string;
+      NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET: string;
+      NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID: string;
+      NEXT_PUBLIC_FIREBASE_APP_ID: string;
+      NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID: string;
+      NEXT_PUBLIC_FIREBASE_PUBLIC_MESSAGING_KEY: string;
+    };
+  }
+}

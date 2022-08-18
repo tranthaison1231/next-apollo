@@ -1,0 +1,29 @@
+overwrite: true
+schema:
+  - ${NEXT_PUBLIC_BASE_URL}:
+      headers:
+        authorization: ${NEXT_PUBLIC_CODE_GEN_TOKEN}
+        platform: WHITELABEL_WEB
+
+config:
+  namingConvention:
+    transformUnderscore: true
+
+hooks:
+  afterAllFileWrite:
+    - eslint --fix
+    - prettier --write
+
+generates:
+  src/generated/schemas.tsx:
+    documents: 'src/graphql/default/**/**.gql'
+    plugins:
+      - typescript
+      - typescript-react-apollo
+      - typescript-operations
+    config:
+      withHOC: false
+      withComponent: false
+      withHooks: true
+      withRefetchFn: true
+      skipTypename: true

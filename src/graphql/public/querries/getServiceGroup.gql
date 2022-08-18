@@ -1,0 +1,6 @@
+query getServiceGroup($id: ID!) {
+  getServiceGroup(id: $id) {
+    id
+    name
+  }
+}

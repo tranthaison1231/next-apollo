@@ -1,0 +1,5 @@
+mutation createMailbox($input: CreateInboxBaseInput!) {
+  createMailbox(input: $input) {
+    id
+  }
+}

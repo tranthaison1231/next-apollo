@@ -1,0 +1,22 @@
+query searchServiceGroup (
+  $input: SearchServiceGroupDto!, 
+  $queryParams: QueryFilterDto!
+) {
+  searchServiceGroup(input: $input, queryParams: $queryParams) {
+    meta {
+      ...MetaFragment
+    }
+    items {
+      id
+      name
+      icon
+      image
+      colorCode
+      isActive
+      priority
+      displayName
+      createdAt
+      updatedAt
+    }
+  }
+}

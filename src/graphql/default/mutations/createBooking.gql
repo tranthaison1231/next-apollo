@@ -1,0 +1,5 @@
+mutation createBooking ($input: UpsertBookingDto!) {
+  createBooking(input: $input) {
+    id
+  }
+}

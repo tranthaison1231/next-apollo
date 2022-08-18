@@ -1,0 +1,42 @@
+query getPackage($id: ID!) {
+  getPackage(id: $id) {
+    id
+    name
+    isActive
+    isAvailable
+    description
+    amount
+    displayName
+    roomId
+    room {
+      id
+      thumbnail
+      gallery
+      description
+      priceType
+      floorPlan
+      capacityPeople
+    }
+    location {
+      name
+      address
+    }
+    packageType {
+      name
+      displayName
+      unit
+      startTime
+      endTime
+    }
+    occupiedCapacity
+    availableCapacity
+    roomTypeId
+    roomType {
+      name
+      displayName
+      serviceGroupId
+    }
+    createdAt
+    updatedAt
+  }
+}

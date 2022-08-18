@@ -1,0 +1,6 @@
+mutation deleteCustomerEvent($id: ID!) {
+  deleteCustomerEvent(id: $id) {
+    success
+    message
+  }
+}

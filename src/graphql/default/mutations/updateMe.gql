@@ -1,0 +1,5 @@
+mutation updateMe($input: UpdateWlaUserDto!) {
+  updateMe(input: $input) {
+    id
+  }
+}

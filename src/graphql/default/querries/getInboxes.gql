@@ -1,0 +1,48 @@
+query getInboxes($queryParams: QueryFilterDto!) {
+  getInboxes(queryParams: $queryParams) {
+    meta {
+      ...MetaFragment
+    }
+    items {
+      id
+      title
+      userId
+      locationId
+      logo
+      clientHasNewMessage
+      businessHasNewMessage
+      lastMessageId
+      lastMessage {
+        message
+        senderId
+        senderLogo
+        senderName
+        files
+        messageType
+        isRead
+        createdAt
+      }
+      enquiryType
+      serviceId
+      packageTypeId
+      duration
+      people
+      startDate
+      message
+      status
+      userId
+      user {
+        fullName
+        username
+        avatar
+        email
+      }
+      customerId
+      customer {
+        fullName
+        avatar
+        email
+      }
+    }
+  }
+}

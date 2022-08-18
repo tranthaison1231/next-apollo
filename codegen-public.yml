@@ -1,0 +1,44 @@
+overwrite: true
+schema:
+  - ${NEXT_PUBLIC_BASE_PUBLIC_URL}:
+      headers:
+
+config:
+  namingConvention:
+    transformUnderscore: true
+
+hooks:
+  afterAllFileWrite:
+    - eslint --fix
+    - prettier --write
+
+generates:
+  src/generated/schemas-public.tsx:
+    documents: 'src/graphql/public/**/**.gql'
+    plugins:
+      - typescript
+      - typescript-react-apollo
+      - typescript-operations
+    config:
+      withHOC: false
+      withComponent: false
+      withHooks: true
+      withRefetchFn: true
+      skipTypename: true
+
+  src/generated/public-ssr-schemas.tsx:
+    documents: 'src/graphql/public/**/**.gql'
+    config:
+      withHOC: false
+      documentMode: external
+      importDocumentNodeExternallyFrom: ./schemas-public
+      reactApolloVersion: 3
+      withHooks: true
+    preset: import-types
+    presetConfig:
+      typesPath: ./schemas-public
+    plugins:
+      - add:
+          content:
+            - '/* eslint-disable  */'
+      - graphql-codegen-apollo-next-ssr

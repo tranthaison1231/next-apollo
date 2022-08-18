@@ -1,0 +1,30 @@
+query getEventDetail($id: ID!) {
+  getEvent(id: $id) {
+		id
+		name
+		description
+		thumbnail
+		address
+		isActive
+		eventTime
+		endTime
+		createdAt
+		content
+		capacity
+		eventBy
+		price
+		eventLink
+		status
+		location
+		type
+		isActive
+    customerEventSummary {
+      totalGoing
+      totalInterest
+    }
+		customerEvent {
+			id
+			responseType
+		}
+  }
+}

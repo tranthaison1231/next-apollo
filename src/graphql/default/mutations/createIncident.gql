@@ -1,0 +1,5 @@
+mutation createIncident($input: CreateIncidentDto!) {
+  createIncident(input: $input) {
+    id
+  }
+}

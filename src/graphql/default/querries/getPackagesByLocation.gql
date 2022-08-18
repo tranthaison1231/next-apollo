@@ -1,0 +1,31 @@
+query getPackagesByLocation ($queryParams: QueryFilterDto!, $id: Float!) {
+  getPackagesByLocation(queryParams: $queryParams, id: $id) {
+    meta {
+      ...MetaFragment
+    }
+    items {
+      id
+      name
+      isActive
+      isVisible
+      displayName
+      description
+      amount
+      roomId
+      room {
+        id
+        name
+      }
+      businessId
+      locationId
+      packageTypeId
+      packageType {
+        id
+        name
+      }
+      note
+      createdAt
+      updatedAt
+    }
+  }
+}

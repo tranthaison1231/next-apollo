@@ -1,0 +1,185 @@
+@import '~antd/es/style/themes/default.less';
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+@primary-color: #5a189a;
+@secondary-color: #f58220;
+@warning-color: #ff934b;
+@error-color: #f5222d;
+@success-color: #52c41a;
+@normal-color: #1f2024;
+@info-color: #096dd9;
+@color-black: #000000;
+@color-white: #ffffff;
+@color-gray: #7a7a9d;
+@disabled-color: #b1b7cc;
+@layout-body-background: #fafafa;
+@surface-primary: #f7f8fd;
+@surface-secondary: #fff6ff;
+@surface-light: #e5dde5;
+@surface-dark: #191819;
+@primary-color-light-90: #eee7f4;
+@gray-light: #edf2f7;
+@purple-light: #8c8693;
+@gray-dark: #95a9d729;
+@color-grey-1: #070632;
+@tabs-light: #f7f8fd;
+@pink-light: #fff6ff;
+@scroll-bar: #e8e9e9;
+@pink-light: #f7f3fa;
+
+* {
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  scroll-behavior: smooth;
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-transition: 'color 9999s ease-out, background-color 9999s ease-out';
+    -webkit-transition-delay: 9999s;
+    transition: 'color 9999s ease-out, background-color 9999s ease-out';
+    transition-delay: 9999s;
+  }
+}
+
+:root {
+  --primary-color: @primary-color;
+  --secondary-color: @secondary-color;
+  --secondary-color-light-80: #ffd899;
+  --secondary-color-light-50: #ff9e00;
+  --warning-color: @warning-color;
+  --error-color: @error-color;
+  --disabled-color: @disabled-color;
+  --success-color: @success-color;
+  --normal-color: @normal-color;
+  --info-color: @info-color;
+  --surface-primary: @surface-primary;
+  --surface-secondary: @surface-secondary;
+  --color-black: @color-black;
+  --color-white: @color-white;
+  --color-gray: @color-gray;
+  --surface-dark: @surface-dark;
+  --disabled-color: @disabled-color;
+  --primary-color-light-90: @primary-color-light-90;
+  --color-grey-1: @color-grey-1;
+  --purple-light: @purple-light;
+  --gray-dark: @gray-dark;
+  --tabs-light: @tabs-light;
+  --pink-light: @pink-light;
+  /* Custom Scrollbar */
+  overflow-y: scroll;
+  overflow-y: overlay;
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: white;
+    border-radius: 9999px;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: @scroll-bar;
+    border-radius: 0.875rem;
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: @color-gray;
+  }
+}
+
+@border-radius-base: 12px;
+@card-padding-base: 16px;
+@btn-height-base: 40px;
+@btn-font-weight: 700;
+@btn-primary-color: var(--secondary-color-light-50);
+@btn-default-color: @primary-color;
+@btn-default-border: @primary-color;
+@btn-border-radius-base: 8px;
+@typography-title-font-weight: 700;
+@layout-body-background: @white;
+@checkbox-size: 1.25rem;
+@checkbox-color: @secondary-color;
+@checkbox-border-width: 0px;
+@checkbox-border-radius: 0.25rem;
+
+.ant-btn {
+  text-transform: uppercase;
+}
+
+.ant-divider-horizontal.ant-divider-dashed {
+  border-width: 1px;
+}
+
+.ant-steps-item-tail {
+  padding: 4px 0px !important;
+  &::after {
+    background-color: var(--secondary-color-light-80) !important;
+  }
+}
+
+.checkbox-location {
+  .ant-radio-checked .ant-radio-inner {
+    border-color: var(--secondary-color) !important ;
+  }
+  .ant-radio-checked .ant-radio-inner:after {
+    background-color: var(--secondary-color);
+  }
+  .ant-radio:hover .ant-radio-inner {
+    border-color: var(--secondary-color);
+  }
+}
+
+.ant-card-body {
+  padding: 24px;
+}
+
+.ant-image-preview-img {
+  margin: auto;
+
+  &-wrapper::before {
+    height: 5%;
+  }
+}
+
+.rc-virtual-list {
+  &-holder {
+    scroll-behavior: unset !important;
+  }
+}
+.ant-collapse-header {
+  align-items: center !important;
+  &-text {
+    width: 100%;
+  }
+}
+
+.ant-carousel {
+  .slick-next,
+  .slick-prev {
+    top: 94%;
+  }
+}
+
+.ant-form-item {
+  margin-bottom: 0;
+  .ant-form-item-label {
+    padding-bottom: 0;
+    label {
+      color: var(--primary-color);
+      font-weight: 600;
+      font-size: 1rem;
+    }
+  }
+}
+
+span.anticon.anticon-eye {
+  position: relative;
+  top: -0.188rem;
+}
+
+.ant-notification-notice-message {
+  font-weight: 700;
+}

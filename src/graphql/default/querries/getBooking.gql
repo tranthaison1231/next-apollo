@@ -1,0 +1,34 @@
+query getBooking ($id: ID!) {
+  getBooking(id: $id) {
+    id
+    code
+    customerName
+    location {
+      name
+      address
+    }
+    package {
+      name
+      packageType {
+        unit
+      }
+    }
+    room {
+      thumbnail
+      gallery
+    }
+    customerId
+    note
+    images
+    files
+    startTime
+    endTime
+    status
+    numberOfPeople
+    totalBookingAmount
+    extraServiceFee
+    totalAmount
+    createdAt
+    updatedAt
+  }
+}

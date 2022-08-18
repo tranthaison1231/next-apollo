@@ -1,0 +1,23 @@
+query getMessages($inboxId: Float!, $queryParams: QueryFilterDto!) {
+  getMessages(inboxId: $inboxId, queryParams: $queryParams) {
+    meta {
+      ...MetaFragment
+    }
+    items {
+      id
+      message
+      inboxId
+      senderId
+      receiverId
+      senderName
+      receiverName
+      isHidden
+      files
+      isRead
+      senderLogo
+      messageType
+      receiverLogo
+      createdAt
+    }
+  }
+}

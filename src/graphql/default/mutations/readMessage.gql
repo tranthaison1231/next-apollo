@@ -1,0 +1,3 @@
+mutation readMessage($input: ClientReadMessageInput!) {
+  readMessage(input: $input)
+}

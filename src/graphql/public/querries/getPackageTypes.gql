@@ -1,0 +1,21 @@
+query getPackageTypes($queryParams: QueryFilterDto!) {
+  getPackageTypes(queryParams: $queryParams) {
+    meta {
+      ...MetaFragment
+    }
+    items {
+      id
+      name
+      businessId
+      locationId
+      isActive
+      unit
+      duration
+      exceptDays
+      startTime
+      endTime
+      displayName
+      description
+    }
+  }
+}

@@ -1,0 +1,32 @@
+query getBookings($queryParams: QueryFilterDto!) {
+  getBookings(queryParams: $queryParams) {
+    meta {
+      ...MetaFragment
+    }
+    items {
+      id
+      code
+      customerId
+      package {
+        name
+        packageType {
+          unit
+        }
+      }
+      serviceReference
+      room {
+        thumbnail
+        gallery
+      }
+      numberOfPeople
+      startTime
+      endTime
+      status
+      actualAmount
+      totalAmount
+      createdAt
+      updatedAt
+      packageData
+    }
+  }
+}

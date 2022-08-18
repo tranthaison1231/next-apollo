@@ -1,0 +1,19 @@
+query getServiceGroups ($queryParams: QueryFilterDto!) {
+  getServiceGroups(queryParams: $queryParams) {
+    meta {
+      ...MetaFragment
+    }
+    items {
+      id
+      name
+      icon
+      image
+      colorCode
+      isActive
+      priority
+      displayName
+      createdAt
+      updatedAt
+    }
+  }
+}

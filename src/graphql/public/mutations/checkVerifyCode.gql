@@ -1,0 +1,6 @@
+mutation checkVerifyCode($input: CheckVerifyCodeDto!) {
+  checkVerifyCode(input: $input) {
+    success
+    message
+  }
+}

@@ -1,0 +1,7 @@
+mutation presignedUrlS3($input: PresignedUrlDto!) {
+  presignedUrlS3(input: $input) {
+    fileName
+    url
+    uploadUrl
+  }
+}

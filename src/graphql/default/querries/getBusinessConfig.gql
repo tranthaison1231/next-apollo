@@ -1,0 +1,17 @@
+query getBusinessConfig {
+  getBusinessConfig {
+    id
+    businessId
+    path
+    isActive
+    createdAt
+    updatedAt
+    ownerId
+    isPrimary
+    logo
+    primaryColor
+    logoMark
+    logoType
+    primaryButtonTextColor
+  }
+}

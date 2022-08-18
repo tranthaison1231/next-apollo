@@ -1,0 +1,5 @@
+mutation sendMessage($input: ClientSendMessageInput!) {
+  sendMessage(input: $input) {
+    id
+  }
+}

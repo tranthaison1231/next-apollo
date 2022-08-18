@@ -1,0 +1,8 @@
+query countries {
+  countries {
+    name
+    states {
+      name
+    }
+  }
+}

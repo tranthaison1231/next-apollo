@@ -1,0 +1,31 @@
+query getExtraServiceOrders ($queryParams: QueryFilterDto!) {
+  getExtraServiceOrders(queryParams: $queryParams) {
+    meta {
+      ...MetaFragment
+    }
+    items {
+      id
+      code
+      extraServices {
+        id
+        extraServiceType {
+          id
+          name
+          displayName
+          image
+          amount
+          extraServiceUnit {
+            id
+            name
+          }
+        }
+        amount
+        quantity
+      }
+      totalItem
+      actualAmount
+      createdAt
+      updatedAt
+    }
+  }
+}

@@ -1,0 +1,15 @@
+query getAmenities($queryParams: QueryFilterDto!) {
+  getAmenities(queryParams: $queryParams) {
+    meta {
+      ...MetaFragment
+    }
+    items {
+      id
+      name
+      isActive
+      icon
+      type
+      isAppFilter
+    }
+  }
+}

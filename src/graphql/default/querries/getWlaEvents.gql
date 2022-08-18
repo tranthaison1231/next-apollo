@@ -1,0 +1,29 @@
+query getEvents($queryParams: QueryFilterDto!) {
+  getWlaEvents(queryParams: $queryParams) {
+    meta {
+      ...MetaFragment
+    } 
+    items {
+      id
+      name
+      description
+      thumbnail
+      address
+      isActive
+      eventTime
+      createdAt
+      content
+      capacity
+      eventBy
+      price
+			eventLink
+      status
+		  endTime
+      type
+      customerEvent {
+        id
+			  responseType
+      }
+    }
+  }
+}

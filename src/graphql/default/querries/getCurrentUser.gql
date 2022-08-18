@@ -1,0 +1,20 @@
+query getCurrentUser {
+  getCurrentUser {
+    id
+    fullName
+    username
+    email
+    gender
+    avatar
+    createdAt
+    updatedAt
+    gallery
+    birthday
+    country
+    phoneNumber
+    team {
+      id
+      name
+    }
+  }
+}

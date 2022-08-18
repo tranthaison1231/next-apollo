@@ -1,0 +1,7 @@
+mutation upsertCustomerEvent($input: UpsertCustomerEventDto!) {
+  upsertCustomerEvent(input: $input) {
+    customerId
+    responseType
+    eventId
+  }
+}

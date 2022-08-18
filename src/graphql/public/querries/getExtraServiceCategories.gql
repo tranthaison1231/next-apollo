@@ -1,0 +1,15 @@
+query getExtraServiceCategories {
+  getExtraServiceCategories {
+    id
+    name
+    description
+    icon
+    isActive
+    type
+    priority
+    code
+    displayName
+    createdAt
+    updatedAt
+  }
+}

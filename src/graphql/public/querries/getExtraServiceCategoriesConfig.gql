@@ -1,0 +1,20 @@
+query getExtraServiceCategoriesConfig($queryParams: QueryFilterDto!) {
+  getExtraServiceCategoriesConfig(queryParams: $queryParams) {
+    meta {
+      ...MetaFragment
+    }
+    items {
+      id
+      name
+      description
+      icon
+      isActive
+      type
+      priority
+      code
+      displayName
+      createdAt
+      updatedAt
+    }
+  }
+}

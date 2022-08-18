@@ -1,0 +1,14 @@
+mutation createInstallation($input: CreateInstallationDto!) {
+  createInstallation(input: $input) {
+    id
+    deviceToken
+    userId
+    customerId
+    businessId
+    firebaseToken
+    deviceType
+    locale
+    timezone
+    platform
+  }
+}

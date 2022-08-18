@@ -1,0 +1,25 @@
+query getServiceGroupsByLocation(
+  $locationId: ID!
+  $queryParams: QueryFilterDto!
+) {
+  getServiceGroupsByLocation(
+    locationId: $locationId
+    queryParams: $queryParams
+  ) {
+    meta {
+      ...MetaFragment
+    }
+    items {
+      id
+      name
+      icon
+      image
+      colorCode
+      isActive
+      priority
+      displayName
+      createdAt
+      updatedAt
+    }
+  }
+}

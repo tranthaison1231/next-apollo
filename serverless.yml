@@ -1,0 +1,57 @@
+service: smartos-tpbank-whitelabel-web
+stage: ${env.STAGE}
+region: ${env.REGION}
+custom:
+  baseName: ${service}-${stage}
+web:
+  component: '@sls-next/serverless-component@latest'
+  inputs:
+    # roleArn: ${env.ROLE}
+    minifyHandlers: true
+    logLambdaExecutionTimes: true
+    useServerlessTraceTarget: true
+    # build:
+    #   postBuildCommands: ['npm run postbuild']
+    memory:
+      defaultLambda: 1024
+      apiLambda: 1024
+      imageLambda: 1024
+    runtime:
+      defaultLambda: 'nodejs14.x'
+      apiLambda: 'nodejs14.x'
+      imageLambda: 'nodejs14.x'
+    timeout:
+      defaultLambda: 20
+      apiLambda: 15
+      imageLambda: 15
+    name:
+      defaultLambda: ${custom.baseName}-default-lambda
+      apiLambda: ${custom.baseName}-api-lambda
+      imageLambda: ${custom.baseName}-image-lambda
+    bucketName: ${custom.baseName}-bucket
+    bucketRegion: ${region}
+    cloudfront:
+      distributionId: ${env.CLOUDFRONT_DISTRIBUTION_ID}
+      defaults:
+        forward:
+          headers:
+            [
+              CloudFront-Is-Desktop-Viewer,
+              CloudFront-Is-Mobile-Viewer,
+              CloudFront-Is-Tablet-Viewer,
+            ]
+      api:
+        minTTL: 10
+        maxTTL: 10
+        defaultTTL: 10
+      aliases:
+        - ${env.CLOUDFRONT_ALIAS}
+      comment: ${env.CLOUDFRONT_ALIAS}
+      priceClass: 'PriceClass_100'
+      certificate:
+        cloudFrontDefaultCertificate: false
+        acmCertificateArn: ${env.CLOUDFRONT_ACM_CERTIFICATE_ARN}
+        sslSupportMethod: 'sni-only'
+        minimumProtocolVersion: 'TLSv1.2_2019'
+      paths: ['/*']
+      waitBeforeInvalidate: true

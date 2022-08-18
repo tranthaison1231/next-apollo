@@ -1,0 +1,5 @@
+mutation createExtraServiceOrder ($input: CreateExtraServiceOrderDto!) {
+  createExtraServiceOrder(input: $input) {
+    id
+  }
+}

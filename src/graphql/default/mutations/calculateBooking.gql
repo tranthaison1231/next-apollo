@@ -1,0 +1,25 @@
+mutation calculateBooking ($input: CalculateBookingDto!) {
+  calculateBooking (input: $input) {
+    bundleDisplay {
+      startTime
+      endTime
+      durationHour
+      packageData
+      packageId
+      totalAmount
+      estFee
+      duration
+      durationType
+    }
+    discount
+    maxCapacity
+    subTotal
+    promoTotal
+    totalAmount
+    isGroup
+    nonWorkingDays {
+      nonWorkingWeekdays
+      nonWorkingDayList
+    }
+  }
+}

@@ -1,0 +1,11 @@
+query getServiceReferences($queryParams: QueryFilterDto!) {
+  getServiceReferences(queryParams: $queryParams) {
+    meta {
+      ...MetaFragment
+    }
+    items {
+      id
+      name
+    }
+  }
+}

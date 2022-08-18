@@ -1,0 +1,42 @@
+query searchPackage(
+  $queryParams: QueryFilterDto!
+  $input: SearchPackagesInput!
+) {
+  searchPackage(queryParams: $queryParams, input: $input) {
+    meta {
+      ...MetaFragment
+    }
+    items {
+      id
+      name
+      isActive
+      isVisible
+      isAvailable
+      displayName
+      description
+      amount
+      roomId
+      room {
+        id
+        name
+        thumbnail
+        gallery
+        priceType
+        capacityPeople
+      }
+      businessId
+      locationId
+      packageTypeId
+      packageType {
+        id
+        name
+        unit
+      }
+      occupiedCapacity
+      availableCapacity
+      note
+      createdAt
+      updatedAt
+    }
+  }
+}

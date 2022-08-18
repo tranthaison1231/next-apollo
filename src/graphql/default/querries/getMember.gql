@@ -1,0 +1,25 @@
+query getMembers($queryParams: QueryFilterDto!) {
+  getMembers(queryParams: $queryParams) {
+    meta {
+      ...MetaFragment
+    }
+    items {
+      id
+      createdAt
+      fullName
+      gender
+      avatar
+      job {
+        name
+      }
+      team {
+        id
+        name
+      }
+      teams {
+        id
+        name
+      }
+    }
+  }
+}

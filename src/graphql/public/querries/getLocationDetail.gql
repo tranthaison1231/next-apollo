@@ -1,0 +1,67 @@
+query getLocationDetail($id: String!, $coordinates: GeoLocationDto) {
+  getLocation(id: $id, coordinates: $coordinates) {
+    id
+		name
+		isActive
+		address
+		thumbnail
+		description
+		roomTypes {
+			name
+			image
+			description
+		}
+		gallery
+		floorPlan
+		amenityIds
+		emailContact
+		emailEnquiry
+		maxPrice
+		minPrice
+		phoneContact
+		createdAt
+		updatedAt
+		workingTime {
+			monday {
+				openTime
+				closeTime
+				isOpen
+			}
+			tuesday {
+				openTime
+				closeTime
+				isOpen
+			}
+			wednesday {
+				openTime
+				closeTime
+				isOpen
+			}
+			thursday {
+				openTime
+				closeTime
+				isOpen
+			}
+			friday {
+				openTime
+				closeTime
+				isOpen
+			}
+			saturday {
+				openTime
+				closeTime
+				isOpen
+			}
+			sunday {
+				openTime
+				closeTime
+				isOpen
+			}
+		}
+		coordinates {
+			longitude
+			latitude
+			distance
+		}
+  }
+}

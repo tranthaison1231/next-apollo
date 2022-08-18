@@ -1,0 +1,17 @@
+query getWlaUserNotifications($queryParams: QueryFilterDto!) {
+  getWlaUserNotifications(queryParams: $queryParams) {
+    meta {
+      ...MetaFragment
+    }
+    items {
+      id
+      userId
+      message
+      notificationType
+      isRead
+      isHidden
+      createdAt
+      data
+    }
+  }
+}

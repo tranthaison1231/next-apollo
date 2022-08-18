@@ -1,0 +1,11 @@
+query getTeams($queryParams: TeamFilterDto!) {
+  getTeams(queryParams: $queryParams) {
+    meta {
+      ...MetaFragment
+    }
+    items {
+      id
+      name
+    }
+  }
+}

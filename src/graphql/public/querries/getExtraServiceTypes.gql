@@ -1,0 +1,26 @@
+query getExtraServiceTypes($queryParams: QueryFilterDto!) {
+  getExtraServiceTypesWla(queryParams: $queryParams) {
+    meta {
+      ...MetaFragment
+    }
+    items {
+      id
+      name
+      displayName
+      isActive
+      amount
+      unit
+      image
+      extraServiceCategoryId
+      extraServiceCategory {
+        name
+      }
+      extraServiceUnitId
+      extraServiceUnit {
+        name
+      }
+      createdAt
+      updatedAt
+    }
+  }
+}

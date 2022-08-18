@@ -1,0 +1,6 @@
+mutation sendVerifyEmailOtp($input: SendUserVerifyEmailOtpInput!) {
+  sendVerifyEmailOtp(input: $input) {
+    success
+    message
+  }
+}
